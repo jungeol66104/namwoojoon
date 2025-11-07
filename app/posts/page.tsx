@@ -17,7 +17,7 @@ export default async function Posts() {
           <Link href="/" className="text-blue-600">Back</Link>
           {isLoggedIn && <Link href="/posts/new" className="text-blue-600">New post</Link>}
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col">
           {posts.length === 0 ? (
             <div className="text-gray-500">No posts yet</div>
           ) : (
@@ -25,7 +25,7 @@ export default async function Posts() {
               <Link
                 key={post.id}
                 href={`/posts/${post.id}`}
-                className="text-blue-600"
+                className="text-blue-600 visited:text-purple-600"
               >
                 {post.title}
               </Link>

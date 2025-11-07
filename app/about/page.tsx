@@ -24,7 +24,7 @@ export default function About() {
             <div>I work to maximize humanity's power.</div>
             <div>Seoul and Jeju, South Korea</div>
             <div>Freelance Developer</div>
-            <a href="mailto:jungeol66104@gmail.com" className="text-blue-600">
+            <a href="mailto:jungeol66104@gmail.com" className="text-blue-600 visited:text-purple-600">
               jungeol66104@gmail.com
             </a>
           </div>

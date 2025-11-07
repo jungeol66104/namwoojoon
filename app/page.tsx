@@ -11,8 +11,8 @@ export default async function Home() {
         <div className="font-bold">Nam Joon</div>
         <div className="flex flex-col items-start gap-3">
           <div className="flex flex-col items-start">
-            <Link href="/about" className="text-blue-600">About</Link>
-            <Link href="/posts" className="text-blue-600">Posts</Link>
+            <Link href="/about" className="text-blue-600 visited:text-purple-600">About</Link>
+            <Link href="/posts" className="text-blue-600 visited:text-purple-600">Posts</Link>
           </div>
           {isLoggedIn && <LogoutButton />}
         </div>
