@@ -10,6 +10,8 @@ type Post = {
   id: string;
   title: string;
   content: string;
+  created_at: Date;
+  updated_at: Date;
 };
 
 export function PostView({ post, isLoggedIn }: { post: Post; isLoggedIn: boolean }) {
@@ -74,14 +76,19 @@ export function PostView({ post, isLoggedIn }: { post: Post; isLoggedIn: boolean
         </div>
         {isEditing ? (
           <form id="edit-form" onSubmit={handleSubmit} className="w-full">
-            <input
-              type="text"
-              name="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-              className="mb-3 w-full focus:outline-none"
-            />
+            <div className="mb-3 flex flex-col">
+              <input
+                type="text"
+                name="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                required
+                className="w-full font-bold focus:outline-none"
+              />
+              <div className="text-sm text-gray-500">
+                Created: {new Date(post.created_at).toLocaleDateString()} | Updated: {new Date(post.updated_at).toLocaleDateString()}
+              </div>
+            </div>
             <textarea
               ref={textareaRef}
               name="content"
@@ -94,7 +101,12 @@ export function PostView({ post, isLoggedIn }: { post: Post; isLoggedIn: boolean
           </form>
         ) : (
           <div className="flex flex-col gap-3">
-            <div>{post.title}</div>
+            <div>
+              <div className="font-bold">{post.title}</div>
+              <div className="text-sm text-gray-500">
+                Created: {new Date(post.created_at).toLocaleDateString()} | Updated: {new Date(post.updated_at).toLocaleDateString()}
+              </div>
+            </div>
             <div className="whitespace-pre-wrap">{post.content}</div>
           </div>
         )}

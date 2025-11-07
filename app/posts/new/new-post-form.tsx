@@ -45,13 +45,18 @@ export function NewPostForm() {
           </button>
         </div>
         <form id="post-form" onSubmit={handleSubmit} className="w-full">
-          <input
-            type="text"
-            name="title"
-            placeholder="Title"
-            required
-            className="mb-3 w-full focus:outline-none"
-          />
+          <div className="mb-3 flex flex-col">
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              required
+              className="w-full font-bold focus:outline-none"
+            />
+            <div className="text-sm text-gray-500">
+              Created: {new Date().toLocaleDateString()}
+            </div>
+          </div>
           <textarea
             ref={textareaRef}
             name="content"
