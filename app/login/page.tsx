@@ -27,7 +27,7 @@ export default function Login() {
   }
 
   return (
-    <div className="mx-auto max-w-screen-xl p-3">
+    <div className="mx-auto max-w-screen-md p-3">
       <div className="flex flex-col gap-3">
         <div className="font-bold">Login</div>
         <Link href="/" className="w-fit text-blue-600">Home</Link>

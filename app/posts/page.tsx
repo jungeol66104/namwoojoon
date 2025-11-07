@@ -10,7 +10,7 @@ export default async function Posts() {
   });
 
   return (
-    <div className="mx-auto max-w-screen-xl p-3">
+    <div className="mx-auto max-w-screen-md p-3">
       <div className="flex flex-col items-start gap-3">
         <div className="font-bold">Posts</div>
         <div className="flex flex-col items-start">

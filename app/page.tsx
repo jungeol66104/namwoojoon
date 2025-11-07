@@ -6,7 +6,7 @@ export default async function Home() {
   const isLoggedIn = await verifySession();
 
   return (
-    <div className="mx-auto max-w-screen-xl p-3">
+    <div className="mx-auto max-w-screen-md p-3">
       <div className="flex flex-col gap-3">
         <div className="font-bold">Nam Joon</div>
         <div className="flex flex-col items-start gap-3">
