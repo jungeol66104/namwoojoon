@@ -21,7 +21,7 @@ export default async function Posts() {
           {posts.length === 0 ? (
             <div className="text-gray-500">No posts yet</div>
           ) : (
-            posts.map((post) => (
+            posts.map((post: { id: string; title: string }) => (
               <Link
                 key={post.id}
                 href={`/posts/${post.id}`}
